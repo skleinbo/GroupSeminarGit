@@ -1,11 +1,11 @@
 push!(LOAD_PATH, ".")
 
-import ModuleA: f,g
+import ModuleA: specnorm,tr
 
 function main()
 	X = rand(16,16)
-	f(X) |> println
-	g(X) |> println
+	specnorm(X) |> println
+	tr(X) |> println
 end
 
 main()

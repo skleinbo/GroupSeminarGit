@@ -1,9 +1,9 @@
 module ModuleA
 
-export f
+export specnorm
 
-f(X) = eigvals(X'*X) |> maximum |> sqrt 
-function g(X::AbstractMatrix)
+specnorm(X) = eigvals(X'*X) |> maximum |> sqrt 
+function tr(X::AbstractMatrix)
  tr = zero(eltype(X))
  if size(X,1) == size(X,2)
   for i in 1:size(X,1)
