@@ -15,4 +15,10 @@ function g(X::AbstractMatrix)
  end
 end
 
+function frob(X::AbstractMatrix)
+ mapreduce(+, X) do x
+  conj(x)*x
+ end |> sqrt
+end
+
 end
