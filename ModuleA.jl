@@ -1,6 +1,6 @@
 module ModuleA
 
-export specnorm
+export specnorm, tr, frob
 
 specnorm(X) = eigvals(X'*X) |> maximum |> sqrt 
 function tr(X::AbstractMatrix)
